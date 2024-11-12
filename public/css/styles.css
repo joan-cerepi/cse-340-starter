@@ -1,6 +1,207 @@
-/******* Change Box Model ***************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Fonts */
+  --heading-font: 'Sour Gummy', sans-serif;
+  --regular-font: 'Roboto Condensed', sans-serif;
+}
+
+/* *********************** Change Box Model *********************** */
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+  font-family: var(--regular-font);
+}
+
+/* *********************** GENERIC STYLES *********************** */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+/* *********************** HEADER *********************** */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0.5rem;
+}
+
+.top-header a {
+  color: rgb(92, 91, 91);
+  text-decoration: none;
+}
+
+.site-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* *********************** NAVIGATION *********************** */
+.navigation {
+  background-color: #000;
+  color: #fff;
+  padding: 0.2rem 0;
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+/* *********************** INDEX PAGE *********************** */
+.h1-title {
+  padding: 0.5rem 1rem;
+}
+
+.hero {
+  text-align: center;
+  position: relative;
+}
+
+.hero-car-img {
+  width: 100%;
+  height: auto;
+}
+
+.call-to-action {
+  background-color: #e7e7e1bd;
+  color: rgb(0, 41, 41);
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  padding: 0.5rem;
+  line-height: 1;
+  font-size: 0.9rem;
+}
+
+.call-to-action-link {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+
+.details {
+  padding: 1rem;
+}
+
+.upgrade-images {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.upgrade-images figure {
+  text-align: center;
+  background-color: teal;
+  width: 25%;
+  height: 130px;
+  padding: 0.5rem;
+}
+
+.upgrade-images figcaption {
+  background-color: #000000;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+.upgrade-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer {
+  padding: 0.5rem;
+}
+
+/* Larger screen view */
+@media screen and (min-width: 64rem) {
+  .top-header {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .site-name {
+    font-size: 3rem;
+  }
+
+  #tools a {
+    font-size: 1.5rem;
+  }
+
+  .navigation li {
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .navigation li:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+
+  .h1-title {
+    font-size: 2.5rem;
+  }
+
+  .hero {
+    text-align: left;
+  }
+
+  .hero-car-img {
+    width: 55%;
+    height: auto;
+  }
+
+  .call-to-action {
+    top: 2.5rem;
+    left: 4rem;
+    font-size: 1.3rem;
+  }
+
+  .call-to-action-link {
+    border: 1px solid #000000;
+    transition: 0.4s ease-in-out;
+  }
+
+  .call-to-action-link:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.3rem;
+    gap: 1rem;
+  }
+
+  .reviews {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .review-list {
+    line-height: 3;
+  }
+
+  .upgrades {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
 }
