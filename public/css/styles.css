@@ -24,6 +24,10 @@ h6 {
   font-family: var(--heading-font);
 }
 
+body {
+  background-image: url('/images/site/checkerboard.jpg')
+}
+
 /* *********************** HEADER *********************** */
 .top-header {
   display: flex;
@@ -57,7 +61,28 @@ h6 {
   justify-content: space-evenly;
 }
 
+.navigation a {
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+}
+
+.navigation a:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+  text-decoration: underline;
+}
+
 /* *********************** INDEX PAGE *********************** */
+#wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
 .h1-title {
   padding: 0.5rem 1rem;
 }
@@ -141,18 +166,6 @@ footer {
 
   #tools a {
     font-size: 1.5rem;
-  }
-
-  .navigation li {
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    padding: 1rem 1.5rem;
-    font-size: 1.3rem;
-  }
-
-  .navigation li:hover {
-    background-color: #FFFFFF;
-    color: #000000;
   }
 
   .h1-title {
